@@ -1,3 +1,6 @@
 [submodule "elite-music"]
 	path = elite-music
 	url = https://github.com/markmoxon/elite-music.git
+[submodule "elite-source-code-bbc-master"]
+	path = elite-source-code-bbc-master
+	url = https://github.com/markmoxon/elite-source-code-bbc-master.git
