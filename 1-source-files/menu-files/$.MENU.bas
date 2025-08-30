@@ -131,28 +131,6 @@ PRINT'"See bbcelite.com/hacks for more details."
 END
 ENDPROC
 
-DEF PROCdisablesecpro
-VDU26
-CLS
-PRINT"Sorry, this version of Elite will not"
-PRINT"run on a 6502 Second Processor."
-PRINT
-PRINT"Please unplug your co-processor and"
-PRINT"try booting the disc again."
-END
-ENDPROC
-
-DEF PROCenablesecpro
-VDU26
-CLS
-PRINT"Sorry, this version of Elite needs a"
-PRINT"6502 Second Processor."
-PRINT
-PRINT"Please plug in your co-processor and"
-PRINT"try booting the disc again."
-END
-ENDPROC
-
 REM  "----------------------------------"
 DATA "BBC Master Elite on the BBC B+"
 DATA "The best version of original Elite"
