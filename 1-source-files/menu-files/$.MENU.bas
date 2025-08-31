@@ -13,7 +13,7 @@ HH$=CHR$(132)+CHR$(157)+CHR$(135)
 HL$=CHR$(132)+CHR$(157)+CHR$(135)
 TH$=CHR$(131)+CHR$(157)+CHR$(132)
 TL$=CHR$(131)+CHR$(157)+CHR$(132)
-START%=2+3
+START%=2
 ROWS%=3
 PROCtitle
 PROCoptions
@@ -31,12 +31,13 @@ DEF PROCtitle
 PRINTTAB(13,2);CHR$(151);CHR$(153);"<$h h l$h,";CHR$(145);CHR$(154)
 PRINTTAB(13,3);CHR$(151);CHR$(153);"w0j0j j jq";CHR$(145);CHR$(154)
 PRINTTAB(13,4);CHR$(135);" COMPENDIUM";CHR$(145);CHR$(154)
-VDU28,0,24,39,5
+PRINTTAB(13,5);CHR$(131);"  ADDENDUM ";CHR$(145);CHR$(154)
+VDU28,0,24,39,6
 CLS
 PRINT'CHR$(130);"   Elite by Ian Bell and David Braben"
 PRINTCHR$(130);"       Enhancements by Mark Moxon"
 PRINT'CHR$(131);"^ to select, ] for info, RETURN to play";
-VDU28,0,24,39,9
+VDU28,0,24,39,10
 ENDPROC
 
 DEF PROCoptions
@@ -52,6 +53,12 @@ Y%=Y%+ROWS%
 C%=C%+1
 READ T$, V$
 UNTIL T$=""
+PRINT''CHR$(132);"   Your BBC Micro B+ can not only run"
+PRINTCHR$(132);"     these enhanced versions of BBC"
+PRINTCHR$(132);"     Master Elite, but you can also"
+PRINTCHR$(132);"     play all of the variants in the "
+PRINTCHR$(132);"   Elite Compendium for the BBC Micro"
+PRINT'CHR$(130);"   See bbcelite.com/hacks for details";
 ENDPROC
 
 DEF PROCgettitle
@@ -103,13 +110,13 @@ PRINTTAB(0,0);CHR$(131);"       ] for menu, RETURN to play";
 FOR I%=5TO13:PRINTTAB(0,I%);CHR$(134);:NEXT
 PRINTTAB(0,14);CHR$(130);
 PRINTTAB(0,15);CHR$(130);
-IF O%=0 PROCsh(5,"The BBC Master version of Elite"):PROCsh(6,"with the following enhancements"):PROCsh(8,"Backported to run on the BBC B+")
-IF O%=0 PROCsh(9,"Flicker-free ships and planets"):PROCsh(10,"Docking computer improvements"):PROCsh(11,"The epic Trumbles mission"):PROCsh(12,"Joystick and fuel scoop improvements")
+IF O%=0 PROCsh(5,"The BBC Master version of Elite"):PROCsh(6,"with the following enhancements")
+IF O%=0 PROCsh(8,"Flicker-free ships and planets"):PROCsh(9,"Docking computer improvements"):PROCsh(10,"The epic Trumbles mission"):PROCsh(11,"Joystick and fuel scoop improvements")
 IF O%=1 PROCsh(5,"The BBC B+ version of BBC Master Elite"):PROCsh(6,"with added docking and title music"):PROCsh(8,"Plus all the other Compendium features")
-IF O%=1 PROCsh(10,"For the BBC Micro B+128"):PROCsh(12,"Or the BBC B+ with 16K sideways RAM")
-IF O%=0 PROCsh(14,"For the BBC Micro B+ and B+128")
-IF O%=1 PROCsh(14,"For the BBC B+128, or B+ with 16K SRAM")
-PROCsh(15,"See www.bbcelite.com for more details")
+IF O%=1 PROCsh(9,"like flicker-free ships and planets,"):PROCsh(10,"bug fixes, better joysticks, docking"):PROCsh(11,"and fuel scoops... and the Trumbles")
+IF O%=0 PROCsh(13,"For the BBC Micro B+ and B+128")
+IF O%=1 PROCsh(13,"For the BBC B+128, or B+ with 16K SRAM")
+PROCsh(14,"See bbcelite.com/hacks for details")
 REPEAT
 K%=GET
 UNTIL K%=136 OR K%=137 OR K%=13
@@ -127,7 +134,7 @@ PRINT"Compendium only works on the BBC Micro"
 PRINT"B+ and B+128."
 PRINT'"There are separate versions available"
 PRINT"for the BBC Micro and BBC Master."
-PRINT'"See bbcelite.com/hacks for more details."
+PRINT'"See bbcelite.com/hacks for details."'
 END
 ENDPROC
 
