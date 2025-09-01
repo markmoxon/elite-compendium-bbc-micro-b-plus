@@ -8,11 +8,12 @@ This repository contains source code for the Elite Compendium for the BBC Micro 
 
 The Elite Compendium is a collection of the very best of Acornsoft Elite, updated with as many hacks and enhancements as I've been able to fit in. If you're looking to play 8-bit Elite, then this is a pretty good place to start. For more information, see the [bbcelite.com website](https://elite.bbcelite.com/hacks/elite_compendium.html).
 
-This repository contains submodules for each of the individual programs on the disc. Each submodule points to a branch called `elite-source-code-bbc-master` or `elite-source-code-bbc-master-music` that contains the version of that program to be included in the Compendium disc.
+This repository contains submodules for each of the individual programs on the disc. Each submodule points to a branch that contains the version of that program to be included in the Compendium disc.
 
 See the individual subprojects for more information.
 
-* [BBC Master Elite](https://github.com/markmoxon/elite-source-code-bbc-master)
+* [BBC Master Elite, bbc-micro-b-plus branch](https://github.com/markmoxon/elite-source-code-bbc-master/tree/bbc-micro-b-plus)
+* [BBC Master Elite, bbc-micro-b-plus-music branch](https://github.com/markmoxon/elite-source-code-bbc-master/tree/bbc-micro-b-plus-music)
 
 ## Acknowledgements
 
