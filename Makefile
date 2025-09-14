@@ -3,7 +3,7 @@ BEEBASM?=beebasm
 .PHONY:all
 all:
 	$(BEEBASM) -i 1-source-files/main-sources/elite-readme.asm
-	$(BEEBASM) -i 1-source-files/main-sources/elite-disc.asm -do 3-compiled-game-discs/elite-compendium-bbc-micro-b-plus.ssd -opt 3 -title "Compendium"
+	$(BEEBASM) -i 1-source-files/main-sources/elite-disc.asm -do 3-compiled-game-discs/elite-compendium-bbc-micro-b-plus.ssd -opt 3 -title "CompendiumB+"
 
 .PHONY:b2
 b2:
