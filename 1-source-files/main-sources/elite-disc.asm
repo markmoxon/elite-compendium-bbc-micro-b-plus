@@ -41,12 +41,12 @@
 
  PUTFILE "elite-source-code-bbc-master/3-assembled-output/M128Elt.bin", "M128Elt", &FF1100, &FF1143
  PUTFILE "elite-source-code-bbc-master/3-assembled-output/BDATA.bin", "BDATA", &000000, &000000
- PUTFILE "elite-source-code-bbc-master/3-assembled-output/BCODE.bin", "BCODE", &FF1100, &FF2917
+ PUTFILE "elite-source-code-bbc-master/3-assembled-output/BCODE.bin", "BCODE", &FF1100, &FF2915
 
 \ B+128
 
  PUTFILE "elite-source-code-bbc-master-music/3-assembled-output/M128Elt.bin", "M128ElM", &FF1100, &FF1143
- PUTFILE "elite-source-code-bbc-master-music/3-assembled-output/BCODE.bin", "MCODE", &FF1100, &FF2917
+ PUTFILE "elite-source-code-bbc-master-music/3-assembled-output/BCODE.bin", "MCODE", &FF1100, &FF2915
  PUTBASIC "elite-source-code-bbc-master-music/1-source-files/music/load-music.bas", "ELITEM"
  PUTFILE "elite-music/elite-music.rom", "MUSIC", &008000, &008000
 
