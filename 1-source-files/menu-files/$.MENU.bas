@@ -2,9 +2,13 @@ MODE 7
 *FX 4,1
 *FX 200,1
 VDU 23;8202;0;0;0;
+secpro%=FALSE
 O%=0:A%=&00:X%=&01
 bplus%=(USR(&FFF4) AND &FF00)=&200
 IF NOT bplus% THEN PROCnotbplus
+A%=&EA:X%=&00:Y%=&FF
+IF (USR(&FFF4) AND &FF00) THEN secpro%=TRUE
+IF secpro% THEN PROCdisablesecpro
 *RUN SCREEN
 U%=INKEY(200)
 UH$="  "+CHR$(130)
@@ -135,6 +139,15 @@ PRINT"B+ and B+128."
 PRINT'"There are separate versions available"
 PRINT"for the BBC Micro and BBC Master."
 PRINT'"See bbcelite.com/hacks for details."'
+END
+ENDPROC
+
+DEF PROCdisablesecpro
+PRINT"I'm sorry, this version of Elite will"
+PRINT"not run on a 6502 Second Processor."
+PRINT
+PRINT"Please disable your co-processor and"
+PRINT"try booting the disc again."'
 END
 ENDPROC
 
