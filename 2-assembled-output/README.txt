@@ -14,11 +14,8 @@
 Dunn (c) D. Braben and I. Bell 1985,
 ported from the C64 by Negative Charge
 
-Sideways RAM detection and loading
-routines by Tricky and J.G.Harston
-
 See www.bbcelite.com for details
 
-Build: 2026-01-12 13:55:05
+Build: 2026-01-15 15:32:33
 ---------------------------------------
 
